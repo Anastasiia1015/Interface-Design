@@ -1,0 +1,91 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F8F8F8;
+    margin: 0;
+    padding: 0;
+}
+
+.wishlist-header {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.wishlist-header img {
+    width: 80px;
+    height: 80px;
+}
+
+.wishlist-title {
+    font-weight: 600; /* Semi Bold */
+    font-style: italic; /* Italic */
+}
+
+.wishlist-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.wishlist-item {
+    background-color: #FFFFFF;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-row {
+    display: flex;
+    align-items: center;
+}
+
+.product-row img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin-right: 40px; /* Збільшуємо відступ між картинкою та іншими елементами */
+}
+
+.wishlist-details {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.product-info {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.product-name {
+    font-weight: 600; /* Semi Bold */
+    font-style: italic; /* Italic */
+    margin-right: 20px; /* Збільшуємо відступ між назвою та ціною */
+    width: 200px; /* Фіксована ширина для назви продукту */
+}
+
+.unit-price {
+    font-weight: 600; /* Semi Bold */
+    color: #666666;
+    margin-right: 20px; /* Збільшуємо відступ між ціною та кнопкою */
+    width: 100px; /* Фіксована ширина для ціни */
+}
+
+.add-to-cart-btn {
+    background-color: #FFD1D1;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 30px; /* Збільшуємо висоту та ширину кнопок */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transform: skew(-10deg);
+    font-weight: 600; /* Semi Bold */
+    font-style: italic; /* Italic */
+}
+
+.add-to-cart-btn:hover {
+    background-color: #FFA5A5;
+}
