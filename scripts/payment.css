@@ -1,0 +1,72 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.payment-left {
+    width: 60%;
+    height: 100vh;
+    background-color: #FFEBEC;
+    float: left;
+    box-sizing: border-box;
+}
+
+.payment-right {
+    width: 40%;
+    height: 100vh;
+    background-color: #FFD1D1;
+    float: right;
+    box-sizing: border-box;
+    overflow-y: auto; /* Додано прокрутку */
+}
+
+.payment-title {
+    text-align: center;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.product-list {
+    padding: 20px;
+    max-width: 100%; /* Ширина списку продуктів */
+}
+
+.product {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.product img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.price {
+    font-weight: 600;
+    font-style: italic;
+    margin-right: 20px; /* Відступ від ціни до правого краю */
+}
+
+.total {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.total-text {
+    font-weight: 600;
+    font-style: italic;
+}
+
+.scrollbar-bg {
+    background-image: linear-gradient(to right, transparent, #f8f8f8 50%, #f8f8f8 50%, transparent);
+    width: 3px; /* Ширина смуги змійки */
+    position: absolute;
+    top: 0;
+    right: 0; /* Зміщуємо смугу змійки праворуч */
+    height: 100%;
+    pointer-events: none; /* Щоб смуга змійки не перешкоджала взаємодії з контентом */
+}
