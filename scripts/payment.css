@@ -38,12 +38,7 @@ body {
     align-items: center;
 }
 
-.product img {
-    width: 100px;
-    height: 100px;
-    border-radius: 5px;
-    margin-right: 20px;
-}
+
 
 .price {
     font-weight: 600;
@@ -70,3 +65,177 @@ body {
     height: 100%;
     pointer-events: none; /* Щоб смуга змійки не перешкоджала взаємодії з контентом */
 }
+.product-list {
+    padding: 20px;
+    max-width: 100%; /* Ширина списку продуктів */
+    max-height: calc(100vh - 20px); /* Визначаємо максимальну висоту для прокрутки */
+    overflow-y: auto; /* Додаємо вертикальну прокрутку, якщо необхідно */
+}
+.wishlist-header img {
+    width: 80px;
+    height: 80px;
+}
+
+.wishlist-title {
+    font-weight: 600; /* Semi Bold */
+    font-style: italic; /* Italic */
+}
+
+.wishlist-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    max-width: 90px; /* Зменшено максимальну ширину для елементів */
+    width: 100%; /* Ширина елементів займе всю доступну ширину */
+    margin: 0 auto; /* Автоматична маржа по горизонталі для центрування */
+    max-height: 200px; /* Зменшена максимальна висота */
+}
+
+.wishlist-container {
+    max-width: 600px; /* Задаємо максимальну ширину контейнера */
+    width: 100%; /* Ширина контейнера займе всю доступну ширину */
+    height: 400px;
+    overflow-y: auto;
+    margin: 50px auto 0; /* Автоматична маржа: 100px зверху, автоматично по горизонталі, 0 знизу */
+    margin-bottom: 30px; /* Доданий відступ вниз, якщо потрібно */
+}
+
+.wishlist-item {
+    background-color: #FFFFFF;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.product-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-row img {
+    width: auto; /* Змінюємо ширину зображень на автоматичну */
+    max-height: 80px; /* Змінюємо максимальну висоту зображень */
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.wishlist-details {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.product-info {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.product-name {
+    font-weight: 200; /* Semi Bold */
+    font-style: italic; /* Italic */
+    margin-right: 20px; /* Збільшуємо відступ між назвою та ціною */
+    width: 200px; /* Фіксована ширина для назви продукту */
+}
+
+.unit-price {
+    color: #666666;
+    margin-right: 20px; /* Збільшуємо відступ між ціною та кнопкою */
+    width: 100px; /* Фіксована ширина для ціни */
+}
+
+.add-to-cart-btn {
+    background-color: #FFD1D1;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 30px; /* Збільшуємо висоту та ширину кнопок */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transform: skew(-10deg);
+    font-weight: 600; /* Semi Bold */
+    font-style: italic; /* Italic */
+}
+
+.add-to-cart-btn:hover {
+    background-color: #FFA5A5;
+}
+
+.scrollbar-bg {
+    background-image: linear-gradient(to right, transparent, #f8f8f8 50%, #f8f8f8 50%, transparent);
+    width: 3px; /* Змінено ширину смуги скроллбару */
+    position: absolute;
+    top: 0;
+    right: -10px;
+    height: 100%;
+    pointer-events: none;
+}
+
+
+
+
+/* Властивості для WebKit браузерів (Chrome, Safari) */
+.wishlist-container::-webkit-scrollbar {
+    width: 5px; /* Задає ширину скроллбару */
+}
+
+.wishlist-container::-webkit-scrollbar-thumb {
+    background-color: #CCCCCC; /* Задає колір скроллбару */
+}
+
+/* Залишається без змін */
+
+.total {
+    position: absolute;
+    bottom: 50px; /* Змінено bottom відповідно до вашого бажання */
+    right: 20px; /* Змінено right для правильного позиціонування */
+    text-align: right;
+    margin-right: 80px;
+    font-size: 24px;
+}
+
+.total-text {
+    font-weight: 600;
+    font-style: italic;
+}
+
+.total-amount {
+    font-weight: 600;
+    font-style: italic;
+    color: #666666; /* Колір тексту для суми */
+}
+
+.proceed-button {
+    position: absolute;
+    bottom: 50px; /* Змінено bottom відповідно до вашого бажання */
+    left: 30%; /* Позиціонуємо кнопку в центрі відносно батьківського елемента */
+    transform: translateX(-50%); /* Центруємо кнопку в горизонтальному напрямку */
+}
+
+.proceed-payment-btn {
+    background-color: #FFF5E4;
+    color: #000000;
+    border: none;
+    padding: 15px 30px; /* Збільшуємо висоту та ширину кнопки */
+    border-radius: 50px; /* Овальна форма */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.proceed-payment-btn:hover {
+    background-color: #FFEAC7;
+}
+
+
+
