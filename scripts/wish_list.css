@@ -24,7 +24,10 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 30px;
+    position: relative;
+    max-width: 800px; /* Задаємо максимальну ширину для елементів */
+    width: 100%; /* Ширина елементів займе всю доступну ширину */
+    margin: 0 auto; /* Автоматична маржа по горизонталі для центрування */
 }
 
 .wishlist-item {
@@ -88,4 +91,33 @@ body {
 
 .add-to-cart-btn:hover {
     background-color: #FFA5A5;
+}
+
+.scrollbar-bg {
+    background-image: linear-gradient(to right, transparent, #f8f8f8 50%, #f8f8f8 50%, transparent);
+    width: 3px; /* Змінено ширину смуги скроллбару */
+    position: absolute;
+    top: 0;
+    right: -10px;
+    height: 100%;
+    pointer-events: none;
+}
+
+
+.wishlist-container {
+    max-width: 800px; /* Задаємо максимальну ширину контейнера */
+    width: 100%; /* Ширина контейнера займе всю доступну ширину */
+    height: 400px;
+    overflow-y: auto;
+    margin: 0 auto; /* Автоматична маржа по горизонталі для центрування */
+    margin-bottom: 30px; /* Доданий відступ вниз, якщо потрібно */
+}
+
+/* Властивості для WebKit браузерів (Chrome, Safari) */
+.wishlist-container::-webkit-scrollbar {
+    width: 5px; /* Задає ширину скроллбару */
+}
+
+.wishlist-container::-webkit-scrollbar-thumb {
+    background-color: #CCCCCC; /* Задає колір скроллбару */
 }
