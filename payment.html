@@ -1,0 +1,88 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment</title>
+    <link rel="stylesheet" type="text/css" href="payment.css">
+
+</head>
+<body>
+<div class="payment-left">
+    <!-- Форми або інше вміст будуть тут -->
+    <div class="button">
+        <h1 class="payment-title">Payment</h1>
+        <div class="proceed-button">
+            <button id="proceed-payment-btn" class="proceed-payment-btn">Proceed Payment</button>
+        </div>
+    </div>
+</div>
+<div class="payment-right">
+    <!-- Зображення продуктів та ціни -->
+    <div class="wishlist-container"> <!-- Доданий контейнер -->
+        <div class="wishlist-items">
+            <div class="wishlist-item">
+                <div class="product-row">
+                    <img src="images/chanel5.png" alt="Product 1">
+                    <div class="wishlist-details">
+                        <h2 class="product-name">Chanel Chance Perfume</h2>
+                        <p class="unit-price">$95.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wishlist-items">
+            <div class="wishlist-item">
+                <div class="product-row">
+                    <img src="images/fenty1.png" alt="Product 1">
+                    <div class="wishlist-details">
+                        <h2 class="product-name">Fenty Beauty Lip Gloss</h2>
+                        <p class="unit-price">$20.00</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="wishlist-items">
+            <div class="wishlist-item">
+                <div class="product-row">
+                    <img src="images/dior.png" alt="Product 1">
+                    <div class="wishlist-details">
+                        <h2 class="product-name">Dior Highlighter</h2>
+                        <p class="unit-price">$25.00</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="wishlist-items">
+            <div class="wishlist-item">
+                <div class="product-row">
+                    <img src="images/fenty1.png" alt="Product 1">
+                    <div class="wishlist-details">
+                        <h2 class="product-name">Fenty Beauty Lip Gloss</h2>
+                        <p class="unit-price">$20.00</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    <div class="total">
+        <span class="total-text">Total:</span>
+        <span class="total-amount">$160.00</span> <!-- Приклад суми, яку ви можете замінити на фактичну -->
+    </div>
+</div>
+
+<!-- Доданий блок для спливаючого вікна -->
+<div class="modal" id="confirmation-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="confirmation-title">Confirmation of Payment</h2>
+        <p class="confirmation-message">Thank you for your payment. Your transaction has been successfully processed.</p>
+    </div>
+</div>
+
+<script src="scripts/payment.js"></script> <!-- Підключення скрипту JavaScript -->
+</body>
+</html>

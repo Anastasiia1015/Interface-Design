@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F8F8F8;
+    margin: 0;
+    padding: 0;
+}
+
+.wishlist-header {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.wishlist-header img {
+    width: 80px;
+    height: 80px;
+}
+
+.wishlist-title {
+    font-weight: 600; /* Semi Bold */
+    font-style: italic; /* Italic */
+}
+
+.wishlist-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    max-width: 800px; /* Задаємо максимальну ширину для елементів */
+    width: 100%; /* Ширина елементів займе всю доступну ширину */
+    margin: 0 auto; /* Автоматична маржа по горизонталі для центрування */
+}
+
+.wishlist-item {
+    background-color: #FFFFFF;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-row {
+    display: flex;
+    align-items: center;
+}
+
+.product-row img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin-right: 40px; /* Збільшуємо відступ між картинкою та іншими елементами */
+}
+
+.wishlist-details {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.product-info {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.product-name {
+    font-weight: 600; /* Semi Bold */
+    font-style: italic; /* Italic */
+    margin-right: 20px; /* Збільшуємо відступ між назвою та ціною */
+    width: 200px; /* Фіксована ширина для назви продукту */
+}
+
+.unit-price {
+    font-weight: 600; /* Semi Bold */
+    color: #666666;
+    margin-right: 20px; /* Збільшуємо відступ між ціною та кнопкою */
+    width: 100px; /* Фіксована ширина для ціни */
+}
+
+.add-to-cart-btn {
+    background-color: #FFD1D1;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 30px; /* Збільшуємо висоту та ширину кнопок */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transform: skew(-10deg);
+    font-weight: 600; /* Semi Bold */
+    font-style: italic; /* Italic */
+}
+
+.add-to-cart-btn:hover {
+    background-color: #FFA5A5;
+}
+
+.scrollbar-bg {
+    background-image: linear-gradient(to right, transparent, #f8f8f8 50%, #f8f8f8 50%, transparent);
+    width: 3px; /* Змінено ширину смуги скроллбару */
+    position: absolute;
+    top: 0;
+    right: -10px;
+    height: 100%;
+    pointer-events: none;
+}
+
+
+.wishlist-container {
+    max-width: 800px; /* Задаємо максимальну ширину контейнера */
+    width: 100%; /* Ширина контейнера займе всю доступну ширину */
+    height: 400px;
+    overflow-y: auto;
+    margin: 0 auto; /* Автоматична маржа по горизонталі для центрування */
+    margin-bottom: 30px; /* Доданий відступ вниз, якщо потрібно */
+}
+
+/* Властивості для WebKit браузерів (Chrome, Safari) */
+.wishlist-container::-webkit-scrollbar {
+    width: 5px; /* Задає ширину скроллбару */
+}
+
+.wishlist-container::-webkit-scrollbar-thumb {
+    background-color: #CCCCCC; /* Задає колір скроллбару */
+}
+.topnav {
+    background-color: #FFD1D1; /* Set the background color */
+    padding-left: 16px;
+    padding-top: 16px;
+    padding-right: 16px;
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+.topnav ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Align list items horizontally */
+}
+
+.topnav ul li {
+    margin: 0; /* Add margin between list items */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.icon-container {
+    text-align: center;
+    border: 5px solid transparent;
+    background-color: #FF9494;
+    width: 29px; /* Set the width of the icons */
+    height: 30px; /* Maintain aspect ratio */
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 100%;
+}
+
+.icon-container:hover{
+    overflow: hidden;
+    border: 5px solid #FC1275;
+}
+
+.icon-image{
+    height: 25px;
+}
+.topnav ul li{
+    display: flex
+}
+
+
+.topnav ul li.logo-item img {
+    width: 150px; /* Set the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+
+}
+.topnav ul li input {
+    border: 5px solid #FF9494;
+    padding: 7px;
+    background-color: #FFEBEC;
+    border-width: 0;
+    border-radius: 50px;
+    width: 500px; /* Set the width of the icons */
+    height: 30px; /* Maintain aspect ratio */
+    outline : none;
+}
+
+#login-button-container{
+    text-align: right;
+    padding-left: 150px;
+}
+#account-button-container{
+    text-align: right;
+    margin-left: 20px;
+}
+#login-button{
+    color: #FF9494;
+    font-family: inherit;
+    font-style: italic;
+    font-weight: bold;
+    height: 30px;
+    padding: 20px;
+    background-color: #FFF5E4;
+    border-width: 0px;
+    border-radius: 100px;
+    font-size: medium;
+    text-align: center;
+    display: flex; /* Use flexbox for vertical centering */
+    align-items: center;
+
+}
+#login-button:hover{
+    background-color: #FFEAC7;
+}
+#account-button{
+    color: #FF9494;
+    font-family: inherit;
+    font-style: italic;
+    font-weight: bold;
+
+    height: 30px;
+    padding: 20px;
+    background-color: #FFF5E4;
+    border-width: 0px;
+    border-radius: 100px;
+    font-size: medium;
+    text-align: center;
+    display: flex; /* Use flexbox for vertical centering */
+    align-items: center;
+}
+#account-button:hover{
+    background-color: #FFEAC7;
+}
+footer {
+    background-color: #FFD1D1;
+    padding: 15px;
+    text-align: center;
+}
+
+.customer-support-button {
+    border: 5px solid transparent;
+    margin-left: 90%;
+    width: 70px;
+    height: 70px;
+    padding: 1px;
+    font-size: 16px;
+    background-color: #FF9494;
+    color: #fff;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.customer-support-button img{
+    padding-top: 10px;
+    width: 50%;
+}
+.customer-support-button:hover {
+    border: 5px solid #FC1275
+}
