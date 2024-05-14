@@ -1,0 +1,33 @@
+.confirmation-body {
+    background-color: rgba(0, 0, 0, 0.5); /* Півпрозорий чорний фон */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.confirmation-container {
+    background: linear-gradient(to right, #DCFFE1, #FEEBE5, #FFAFAF); /* Градієнт з вказаними кольорами */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    position: fixed;
+    top: 50%; /* Розташовуємо по вертикалі на середині вікна */
+    left: 50%; /* Розташовуємо по горизонталі на середині вікна */
+    transform: translate(-50%, -50%); /* Центруємо віконце */
+}
+
+.confirmation-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black; /* Чорний колір тексту */
+}
+
+.confirmation-message {
+    font-size: 18px;
+    color: black; /* Чорний колір тексту */
+}
+
