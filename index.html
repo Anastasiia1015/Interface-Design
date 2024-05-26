@@ -4,32 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
 </head>
 <body>
     <header>
-        <!-- Top navigation bar -->
-        <nav class="top-menu">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <!-- Add more menu items as needed -->
-            </ul>
-        </nav>
+        <div class="topnav">  
+            <ul>  
+                <li class="logo-item">
+                      
+                    <img src="icons/logo-icon.svg" alt="company logo"> 
+                </li>  
+                <li > 
+                    <a href="index.html">
+                        <div class = "icon-container">
+                            <img class="icon-image" src="icons/home-icon.png" alt="Home">  
+                        </div> 
+                    </a>
+                </li> 
+                <li >  
+                    <div class = "icon-container">
+                        <img  class="icon-image" src="icons/search-icon.png" alt="Search icon">  
+                    </div>
+                </li> 
+                <li>
+                    <div id = "search-container">
+                        <input type="text" placeholder="Search..">
+                    </div>
+                </li>
+                <li > 
+                    <a href="shopping-busket.html">
+                        <div class = "icon-container"> 
+                            <img class="icon-image" src="icons/busket-icon.png" alt="Busket icon">  
+                        </div>
+                    </a>
+                    
+                </li>  
+                <li > 
+                    <a href="wish_list.html">
+                        <div class = "icon-container"> 
+                            <img class="icon-image" src="icons/user-icon.png" alt="User icon">  
+                        </div>
+                    </a>
+                    
+                </li>  
+                <li>
+                    <div id = "login-button-container">
+                        <button id = "login-button" type="button">Log in</button>
+                    </div>
+                    <div id = "account-button-container">
+                        <button id="account-button" type="button">Create account</button>
+                    </div>
+                </li>
+            </ul>  
+        </div>  
     </header>
 
     <main>
-        <!-- Filter section -->
-        <section class="filters">
-            <!-- Add filter options here -->
-        </section>
-
-        <!-- Product listing section -->
-        <section class="products">
-            <!-- Add product cards here -->
-        </section>
+        <svg class="flt_svg" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="flt_tag">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />    
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="flt_tag" />
+                    <feComposite in="SourceGraphic" in2="flt_tag" operator="atop"/>
+                </filter>
+            </defs>
+        </svg>
+        <div class="main-container">
+            <div class = "filters-container">
+                <div>
+                    <h2>Filters</h2>
+        <!-- Skin Type -->
+        <div class="filter-block">
+            <h3>Skin Type</h3>
+            <label><input type="checkbox" name="skin" value="normal"> Normal</label>
+            <label><input type="checkbox" name="skin" value="dry"> Dry</label>
+            <label><input type="checkbox" name="skin" value="oily"> Oily</label>
+            <label><input type="checkbox" name="skin" value="combination"> Combination</label>
+        </div>
+        <!-- Price Range -->
+        <div class="filter-block">
+            <h3>Price Range</h3>
+            <div class="price-range-container">
+                <span id="min-price"></span> - <span id="max-price"></span>
+                <input type="range" min="0" max="1000" value="0" class="slider" id="min-price-slider">
+                <input type="range" min="0" max="1000" value="1000" class="slider" id="max-price-slider">
+            </div>
+        </div>
+        <!-- Brand -->
+        <div class="filter-block">
+            <h3>Brand</h3>
+            <select>
+                <option value="chanel">CHANEL</option>
+                <option value="clarins">CLARINS</option>
+                <option value="dior">DIOR</option>
+                <option value="kerastase">KERASTASE</option>
+                <option value="rituals">RITUALS</option>
+                <option value="shiseido">SHISEIDO</option>
+            </select>
+        </div>
+        <div class="filter-block">
+            <h3>Sex</h3>
+            <select>
+                <option value="chanel">MALE</option>
+                <option value="clarins">FEMALE</option>
+            </select>
+        </div>
+        <!-- Rating -->
+        <div class="filter-block">
+            <h3>Rating</h3>
+            <div class="ratings">
+                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+            </div>
+        </div>
+                </div>
+            </div>
+            <div class = "products-container">
+                
+            </div>
+            
+        </div>
     </main>
 
     <footer>
-        <!-- Footer content -->
+        <a href="customer-support.html">
+            <button class="customer-support-button">
+                <img src="icons/faq.png" alt="customer service icon">
+                
+            </button>
+        </a>
+
     </footer>
 
     <script src="scripts/main.js"></script>

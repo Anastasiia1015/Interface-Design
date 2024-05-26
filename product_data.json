@@ -1,26 +1,84 @@
 {
-    "products": [
+  "products": [
       {
-        "id": 1,
-        "name": "Product 1",
-        "description": "Description of product 1.",
-        "price": 19.99,
-        "image": "product1.jpg"
+          "id": 1,
+          "name": "Product 1",
+          "description": "Description of product 1.",
+          "price": 19.99,
+          "image": "images/dior-dior-forever-couture-luminizer-highlighter_17236836_34946649_2048 1.png",
+          "rating": 4
       },
       {
-        "id": 2,
-        "name": "Product 2",
-        "description": "Description of product 2.",
-        "price": 29.99,
-        "image": "product2.jpg"
+          "id": 2,
+          "name": "Product 2",
+          "description": "Description of product 2.",
+          "price": 29.99,
+          "image": "images/dior-dior-forever-couture-luminizer-highlighter_17236836_34946649_2048 1.png",
+          "rating": 3
       },
       {
-        "id": 3,
-        "name": "Product 3",
-        "description": "Description of product 3.",
-        "price": 39.99,
-        "image": "product3.jpg"
+          "id": 3,
+          "name": "Product 3",
+          "description": "Description of product 3.",
+          "price": 39.99,
+          "image": "images/dior-dior-forever-couture-luminizer-highlighter_17236836_34946649_2048 1.png",
+          "rating": 5
+      },
+      {
+          "id": 4,
+          "name": "Product 4",
+          "description": "Description of product 4.",
+          "price": 19.99,
+          "image": "images/dior-dior-forever-couture-luminizer-highlighter_17236836_34946649_2048 1.png",
+          "rating": 2
+      },
+      {
+          "id": 5,
+          "name": "Product 5",
+          "description": "Description of product 5.",
+          "price": 29.99,
+          "image": "images/dior-dior-forever-couture-luminizer-highlighter_17236836_34946649_2048 1.png",
+          "rating": 4
+      },
+      {
+          "id": 6,
+          "name": "Product 6",
+          "description": "Description of product 6.",
+          "price": 39.99,
+          "image": "images/dior-dior-forever-couture-luminizer-highlighter_17236836_34946649_2048 1.png",
+          "rating": 1
+      },
+      {
+          "id": 7,
+          "name": "Product 7",
+          "description": "Description of product 7.",
+          "price": 19.99,
+          "image": "images/dior-dior-forever-couture-luminizer-highlighter_17236836_34946649_2048 1.png",
+          "rating": 5
+      },
+      {
+          "id": 8,
+          "name": "Product 8",
+          "description": "Description of product 8.",
+          "price": 29.99,
+          "image": "images/dior-dior-forever-couture-luminizer-highlighter_17236836_34946649_2048 1.png",
+          "rating": 3
+      },
+      {
+          "id": 9,
+          "name": "Product 9",
+          "description": "Description of product 9.",
+          "price": 39.99,
+          "image": "images/dior-dior-forever-couture-luminizer-highlighter_17236836_34946649_2048 1.png",
+          "rating": 4
+      },
+      {
+          "id": 10,
+          "name": "Product 10",
+          "description": "Description of product 10.",
+          "price": 19.99,
+          "image": "images/dior-dior-forever-couture-luminizer-highlighter_17236836_34946649_2048 1.png",
+          "rating": 2
       }
-    ]
-  }
-  
+  ]
+}

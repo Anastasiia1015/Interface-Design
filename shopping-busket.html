@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Basket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="topnav">  
+            <ul>  
+                <li class="logo-item">
+                      
+                    <img src="icons/logo-icon.svg" alt="company logo"> 
+                </li>  
+                <li > 
+                    <a href="index.html">
+                        <div class = "icon-container">
+                            <img class="icon-image" src="icons/home-icon.png" alt="Home">  
+                        </div> 
+                    </a>
+                </li> 
+                <li >  
+                    <div class = "icon-container">
+                        <img  class="icon-image" src="icons/search-icon.png" alt="Search icon">  
+                    </div>
+                </li> 
+                <li>
+                    <div id = "search-container">
+                        <input type="text" placeholder="Search..">
+                    </div>
+                </li>
+                <li > 
+                    <a href="shopping-busket.html">
+                        <div class = "icon-container"> 
+                            <img class="icon-image" src="icons/busket-icon.png" alt="Busket icon">  
+                        </div>
+                    </a>
+                    
+                </li>  
+                <li > 
+                    <a href="wish_list.html">
+                        <div class = "icon-container"> 
+                            <img class="icon-image" src="icons/user-icon.png" alt="User icon">  
+                        </div>
+                    </a>
+                    
+                </li>  
+                <li>
+                    <div id = "login-button-container">
+                        <button id = "login-button" type="button">Log in</button>
+                    </div>
+                    <div id = "account-button-container">
+                        <button id="account-button" type="button">Create account</button>
+                    </div>
+                </li>
+            </ul>  
+        </div>  
+    </header>
+    <div class="basket-container">
+        <!-- Product items will be dynamically added here -->
+        
+    </div>
+    <div class="total-amount">Total: $0.00</div>
+    <div>
+        <a href="payment.html">
+            <button class="payment-button ">Go to payment</button>
+        </a>
+    </div>
+    
+    <footer>
+        <a href="customer-support.html">
+            <button class="customer-support-button">
+                <img src="icons/faq.png" alt="customer service icon">
+                
+            </button>
+        </a>
+
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
