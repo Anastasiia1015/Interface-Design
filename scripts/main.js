@@ -29,23 +29,14 @@ function displayProducts(products) {
 
     // Function to create the "Add to Cart" button
     function createAddToCartButton() {
-        // Create a container div
         const container = document.createElement('div');
-        container.classList.add('add-to-cart-container');
-    
-        // Create the button element
-        const button = document.createElement('button');
-        button.classList.add('add-to-cart-button');
+        container.classList.add('cart');
+        const button = document.createElement('p');
         button.textContent = 'Add to Cart';
         button.addEventListener('click', function() {
-            // Add logic to handle adding the product to the cart
-            // This can include sending an AJAX request, updating UI, etc.
             console.log('Product added to cart');
         });
-    
-        // Append the button to the container
         container.appendChild(button);
-    
         return container;
     }
 
@@ -54,57 +45,68 @@ function displayProducts(products) {
         const startIndex = (currentPage - 1) * itemsPerPage;
         const endIndex = startIndex + itemsPerPage;
         const currentProducts = products.slice(startIndex, endIndex);
-    
+
         currentProducts.forEach(product => {
-            const productElement = document.createElement('div');
-            productElement.classList.add('product');
-    
-            // Create anchor element
-            const anchorElement = document.createElement('a');
-            anchorElement.href = 'product_page.html'; // Set href attribute
-            productElement.appendChild(anchorElement);
-    
-            // Create image element inside anchor
+            const perfumeElement = document.createElement('div');
+            perfumeElement.classList.add('perfume');
+
+            const titleElement = document.createElement('div');
+            titleElement.classList.add('title');
+            const h3Element = document.createElement('h3');
+            h3Element.textContent =  product.name;
+        
+            titleElement.appendChild(h3Element);
+           
+            perfumeElement.appendChild(titleElement);
+
+            const contentElement = document.createElement('div');
+            contentElement.classList.add('content');
+
+            const radioInput = document.createElement('input');
+            radioInput.type = 'radio';
+            radioInput.name = 'xxx2';
+            radioInput.classList.add('btn-hide2');
+            radioInput.id = `p${startIndex + currentProducts.indexOf(product) + 1}`;
+            radioInput.checked = true;
+            contentElement.appendChild(radioInput);
+
+
+            const boxElement = document.createElement('div');
+            boxElement.classList.add('BOX3');
             const imgElement = document.createElement('img');
-            imgElement.src = product.image; // Using 'image' property from product data
-            anchorElement.appendChild(imgElement);
-    
-            // Create name element
-            const nameElement = document.createElement('div');
-            nameElement.classList.add('name');
-            nameElement.textContent = product.name; // Using 'name' property from product data
-            productElement.appendChild(nameElement);
-    
-            // Create price element
-            const priceElement = document.createElement('div');
-            priceElement.classList.add('price');
-            priceElement.textContent = '$' + product.price.toFixed(2); // Using 'price' property from product data
-            productElement.appendChild(priceElement);
-    
-            // Create star rating element
-            const starRatingElement = createStarRating(product.rating); // Assuming product has a 'rating' property
-            productElement.appendChild(starRatingElement);
-    
-            // Create "Add to Cart" button
+            imgElement.src = product.image;
+            const descriptionElement = document.createElement('p');
+            descriptionElement.innerHTML = `Description: ${product.description} <br>
+            <strong>Price:</strong> $${product.price.toFixed(2)}`;
+            boxElement.appendChild(imgElement);
+            boxElement.appendChild(descriptionElement);
+            contentElement.appendChild(boxElement);
+
+            const namesElement = document.createElement('li');
+            namesElement.classList.add('names2');
+            const greenElement = document.createElement('div');
+            greenElement.classList.add('green');
+            const pNameElement = document.createElement('p');
+            pNameElement.textContent = product.name;
+            greenElement.appendChild(pNameElement);
+            namesElement.appendChild(greenElement);
+            contentElement.appendChild(namesElement);
+
+            perfumeElement.appendChild(contentElement);
+
             const addToCartButton = createAddToCartButton();
-            productElement.appendChild(addToCartButton);
-    
-            productsContainer.appendChild(productElement);
+            perfumeElement.appendChild(addToCartButton);
+
+            productsContainer.appendChild(perfumeElement);
         });
-    
-        // Add event listeners for mouseover and mouseout events
-        productsContainer.querySelectorAll('.product').forEach(product => {
+
+        productsContainer.querySelectorAll('.perfume').forEach(product => {
             product.addEventListener('mouseover', function() {
-                // Show the "Add to Cart" button inside the current product
-                const addToCartButton = product.querySelector('.add-to-cart-button');
+                const addToCartButton = product.querySelector('.cart p');
                 addToCartButton.style.display = 'block';
             });
-    
-            product.addEventListener('mouseout', function() {
-                // Hide the "Add to Cart" button inside the current product
-                const addToCartButton = product.querySelector('.add-to-cart-button');
-                addToCartButton.style.display = 'none';
-            });
+
+            
         });
     }
 
@@ -113,7 +115,6 @@ function displayProducts(products) {
 
     // Event listener for scrolling
     productsContainer.addEventListener('scroll', function() {
-        // If user has scrolled to the bottom, load more products
         if (isScrolledToBottom()) {
             currentPage++;
             displayCurrentPage();
@@ -122,11 +123,13 @@ function displayProducts(products) {
 }
 
 
-
+function isScrolledToBottom() {
+    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+    return scrollTop + clientHeight >= scrollHeight - 5;
+}
 
 // Add event listener for DOMContentLoaded event
 document.addEventListener('DOMContentLoaded', function() {
-    // Fetch product data and display products on the main page
     fetchProductData().then(products => {
         displayProducts(products);
     });
@@ -202,6 +205,7 @@ function displayBasketProducts(products) {
         imgElement.src = product.image;
         productElement.appendChild(imgElement);
 
+
         // Create product name element
         const nameElement = document.createElement('div');
         nameElement.classList.add('product-name');
@@ -266,4 +270,33 @@ document.addEventListener('DOMContentLoaded', function() {
     fetchBasketData().then(products => {
         displayBasketProducts(products);
     });
+});
+
+document.getElementById('login-button').addEventListener('click', function() {
+    var loginBox = document.getElementById('login-box');
+    if (loginBox.style.display === 'none' || loginBox.style.display === '') {
+        loginBox.style.display = 'block';
+    } else {
+        loginBox.style.display = 'none';
+    }
+});
+
+document.getElementById('submit-login').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default anchor behavior
+    var loginBox = document.getElementById('login-box');
+    loginBox.style.display = 'none';
+});
+document.getElementById('account-button').addEventListener('click', function() {
+    var accountBox = document.getElementById('account-box');
+    if (accountBox.style.display === 'none' || accountBox.style.display === '') {
+        accountBox.style.display = 'block';
+    } else {
+        accountBox.style.display = 'none';
+    }
+});
+
+document.getElementById('submit-account').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default anchor behavior
+    var accountBox = document.getElementById('account-box');
+    accountBox.style.display = 'none';
 });
