@@ -166,20 +166,7 @@ table {
     border-radius: 100px; /* Border radius for rounded corners */
     overflow: hidden; /* Ensure inner content is clipped by the outer shape */
 }
-.products-container {
 
-    margin: 10px;
-    flex-grow: 1; /* Expand to fill remaining space */
-    overflow-y: auto; /* Enable vertical scrolling if needed */
-    
-}
-/* Basic styling */
-.products-container {
-    margin-right: 10%;
-    display: flex;
-    flex-wrap: wrap; /* Allow products to wrap to the next line */
-    padding: 40px;
-}
 
 .product {
     position: relative; /* Ensure absolute positioning is relative to this container */
@@ -623,7 +610,7 @@ section {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
-	
+
 }
 
 body {
@@ -720,7 +707,7 @@ body {
 .BOX2 {
 	background-image: url("http://demandware.edgesuite.net/aakk_prd/on/demandware.static/-/Sites-Crabtree-US-Products/default/dw74046499/Large/81473_alt0.png");
 	background-size: 260px 260px;
-	animation: counterSpin 1s;	
+	animation: counterSpin 1s;
 }
 
 .BOX3 img {
@@ -732,7 +719,7 @@ body {
 	transform: rotateY(0deg);
 	backface-visibility: hidden;
 	transition: 1s;
-	animation: expand 1s cubic-bezier(0.47, 2.02, 0.31, -0.36);	
+	animation: expand 1s cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 
 @keyframes expand {
@@ -764,8 +751,18 @@ body {
 .BOX3:hover p {
 	transform: rotateY(0deg);
 }
-
-
+.products-container {
+    margin: 10px;
+    flex-grow: 1; /* Expand to fill remaining space */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+    display: flex;
+    margin-right: 10%;
+    flex-wrap: wrap; /* Allow products to wrap to the next line */
+    padding: 40px;
+}
+.categories {
+    width: 100%;
+}
 /* ----------------animation for BOX------------- */
 
 #r1:checked ~ .BOX .pic { left: 0px;}
@@ -777,7 +774,7 @@ body {
 
 
 /* ----------------animation for BOX2------------- */
-#b2:checked ~ .BOX2 { 
+#b2:checked ~ .BOX2 {
 	background-image: url("http://demandware.edgesuite.net/aakk_prd/on/demandware.static/-/Sites-Crabtree-US-Products/default/dw1d0ba0fb/Large/81478_alt0.png");
 	background-size: 260px 260px;
 	animation: spin 1s;
@@ -794,12 +791,12 @@ body {
 }
 
 /* ----------------hide button to the left------------------ */
-.btn-hide, .btn-hide1, .btn-hide2 { 
-	position: absolute; left: -10000px; 
+.btn-hide, .btn-hide1, .btn-hide2 {
+	position: absolute; left: -10000px;
 }
 
-/* ----------------button for type selection------------------- */		
-.hand_creme .btn, .bath .btn1, .perfume .btn2 { 
+/* ----------------button for type selection------------------- */
+.hand_creme .btn, .bath .btn1, .perfume .btn2 {
 	display: inline-block;
 	position: relative;
 	border-radius: 7px;
@@ -860,33 +857,33 @@ body {
 /* --------------box-shadow settings ------------------- */
 /* ---------hand_creme--------- */
 #r1:checked ~ .btn.orange {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);}
-#r1:checked ~ .btn.green {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);} 
-#r1:checked ~ .btn.blue {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);} 
+#r1:checked ~ .btn.green {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);}
+#r1:checked ~ .btn.blue {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);}
 #r1:checked ~ .btn.purple {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);}
 
 #r2:checked ~ .btn.pink {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);}
-#r2:checked ~ .btn.green {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);} 
-#r2:checked ~ .btn.blue {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);} 
+#r2:checked ~ .btn.green {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);}
+#r2:checked ~ .btn.blue {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);}
 #r2:checked ~ .btn.purple {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);}
 
-#r3:checked ~ .btn.pink  {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);} 
+#r3:checked ~ .btn.pink  {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);}
 #r3:checked ~ .btn.orange {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);}
-#r3:checked ~ .btn.blue {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);} 
+#r3:checked ~ .btn.blue {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);}
 #r3:checked ~ .btn.purple {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);}
 
-#r4:checked ~ .btn.pink  {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);} 
+#r4:checked ~ .btn.pink  {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);}
 #r4:checked ~ .btn.orange {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);}
-#r4:checked ~ .btn.green {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);} 
+#r4:checked ~ .btn.green {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);}
 #r4:checked ~ .btn.purple {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);}
 
-#r5:checked ~ .btn.pink  {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);} 
+#r5:checked ~ .btn.pink  {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);}
 #r5:checked ~ .btn.orange {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);}
-#r5:checked ~ .btn.green {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);} 
+#r5:checked ~ .btn.green {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);}
 #r5:checked ~ .btn.blue {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);}
 
 /* --------------bath-------------- */
 #b1:checked ~ .btn1.lavender {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);}
-#b2:checked ~ .btn1.honey {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);} 
+#b2:checked ~ .btn1.honey {box-shadow: 0 0 0px rgba(0, 0, 0, 0.6);}
 
 
 /* ------------------- product names -------------------- */
@@ -900,7 +897,7 @@ body {
 }
 .names div, .names1 div, .names2 div {
 	width: 200px;
-	height: 30px;		
+	height: 30px;
 	position: absolute;
 	left: 30px;
 	top: -30px;
@@ -917,44 +914,44 @@ body {
 
 /* ------------animation for product names--------------- */
 /* ---------.hand_cremes---------- */
-#r2:checked ~ .names div:nth-child(2){ 
-	animation: slideDown 0.5s 0s ease-in forwards; 
+#r2:checked ~ .names div:nth-child(2){
+	animation: slideDown 0.5s 0s ease-in forwards;
 	transform: scale(1.2);
 		transition: 1s 0.6s cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
-#r3:checked ~ .names div:nth-child(3){ 
+#r3:checked ~ .names div:nth-child(3){
 	animation: slideDown 0.5s 0s ease-in forwards;
 	transform: scale(1.2);
-		transition: 1s 0.6s cubic-bezier(0.47, 2.02, 0.31, -0.36); 
+		transition: 1s 0.6s cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
-#r4:checked ~ .names div:nth-child(4){ 
+#r4:checked ~ .names div:nth-child(4){
 	animation: slideDown 0.5s 0s ease-in forwards;
 	transform: scale(1.2);
-		transition: 1s 0.6s cubic-bezier(0.47, 2.02, 0.31, -0.36); 
+		transition: 1s 0.6s cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
-#r5:checked ~ .names div:nth-child(5){ 
+#r5:checked ~ .names div:nth-child(5){
 	animation: slideDown 0.5s 0s ease-in forwards;
 	transform: scale(1.2);
-		transition: 1s 0.6s cubic-bezier(0.47, 2.02, 0.31, -0.36); 
+		transition: 1s 0.6s cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
-#r1:checked ~ .names div:nth-child(1){ 
+#r1:checked ~ .names div:nth-child(1){
 	animation: slideDown 0.5s 0s ease-in forwards;
 	transform: scale(1.2);
-		transition: 1s 0.6s cubic-bezier(0.47, 2.02, 0.31, -0.36); 
+		transition: 1s 0.6s cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 
 
 /* ---------.bath---------- */
-#b2:checked ~ .names1 div:nth-child(2){ 
+#b2:checked ~ .names1 div:nth-child(2){
 	animation: bounce 1s 0s ease-in forwards;
 }
-#b1:checked ~ .names1 div:nth-child(1){ 
+#b1:checked ~ .names1 div:nth-child(1){
 	animation: bounce 1s 0s ease-in forwards;
 }
 
 
 /* ---------.perfume---------- */
-#p1:checked ~ .names2 div:nth-child(1){ 
+#p1:checked ~ .names2 div:nth-child(1){
 	animation: bounce 1s 0s ease-in forwards;
 }
 
@@ -997,7 +994,7 @@ body {
 	transition: 1s;
 	animation: wobble 1s ease-in-out 1;
 }
-	
+
 
 @keyframes wobble {
   16.65% { transform: translateY(8px); }
@@ -1028,4 +1025,105 @@ body {
 }
 .BOX3 p{
     max-width: 180px
+}
+/* HTML Nav Styles */
+/* HTML Nav Styles */
+/* HTML Nav Styles */
+nav menuitem {
+    position:relative;
+    display:block;
+    opacity:0;
+    cursor:pointer;
+}
+
+nav menuitem > menu {
+    position: absolute;
+    pointer-events: none;
+    z-index: 10; /* Ensures the dropdown is on top */
+}
+nav > menu { display:flex; }
+
+nav > menu > menuitem { pointer-events: all; opacity:1; }
+menu menuitem a { white-space:nowrap; display:block; }
+
+menuitem:hover > menu {
+    pointer-events:initial;
+}
+menuitem:hover > menu > menuitem,
+menu:hover > menuitem{
+    opacity:1;
+}
+nav > menu > menuitem menuitem menu {
+    transform:translateX(100%);
+    top:0; right:0;
+}
+/* User Styles Below Not Required */
+/* User Styles Below Not Required */
+/* User Styles Below Not Required */
+
+nav {
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+nav a {
+    background: #ec7272;
+    color:#FFF;
+    min-width:190px;
+    transition: background 0.5s, color 0.5s, transform 0.5s;
+    margin:0px 6px 6px 0px;
+    padding:20px 40px;
+    box-sizing:border-box;
+    border-radius:10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    position:relative;
+}
+
+nav a:hover:before {
+    content: '';
+    top:0;left:0;
+    position:absolute;
+    background:rgba(0, 0, 0, 0.2);
+    width:100%;
+    height:100%;
+}
+
+nav > menu > menuitem > a + menu:after{
+    content: '';
+    position:absolute;
+    border:10px solid transparent;
+    border-top: 10px solid white;
+    left:12px;
+    top: -40px;
+}
+nav menuitem > menu > menuitem > a + menu:after{
+    content: '';
+    position:absolute;
+    border:10px solid transparent;
+    border-left: 10px solid white;
+    top: 20px;
+    left:-180px;
+    transition: opacity 0.6s, transform 0s;
+}
+
+nav > menu > menuitem > menu > menuitem{
+    transition: transform 0.6s, opacity 0.6s;
+    transform:translateY(150%);
+    opacity:0;
+}
+nav > menu > menuitem:hover > menu > menuitem,
+nav > menu > menuitem.hover > menu > menuitem{
+    transform:translateY(0%);
+    opacity: 1;
+}
+
+menuitem > menu > menuitem > menu > menuitem{
+    transition: transform 0.6s, opacity 0.6s;
+    transform:translateX(195px) translateY(0%);
+    opacity: 0;
+}
+menuitem > menu > menuitem:hover > menu > menuitem,
+menuitem > menu > menuitem.hover > menu > menuitem{
+    transform:translateX(0) translateY(0%);
+    opacity: 1;
 }
