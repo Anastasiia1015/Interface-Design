@@ -70,8 +70,10 @@ function displayProducts(products) {
             radioInput.checked = true;
             contentElement.appendChild(radioInput);
 
-
+            const linkElement = document.createElement('a')
+            linkElement.href = '../product_page.html'
             const boxElement = document.createElement('div');
+            linkElement.appendChild(boxElement)
             boxElement.classList.add('BOX3');
             const imgElement = document.createElement('img');
             imgElement.src = product.image;
@@ -80,7 +82,7 @@ function displayProducts(products) {
             <strong>Price:</strong> $${product.price.toFixed(2)}`;
             boxElement.appendChild(imgElement);
             boxElement.appendChild(descriptionElement);
-            contentElement.appendChild(boxElement);
+            contentElement.appendChild(linkElement);
 
             const namesElement = document.createElement('li');
             namesElement.classList.add('names2');
