@@ -7,11 +7,24 @@
 body {
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
+    background-color: white;
 }
 
 body{
     font-family: 'Inter', sans-serif;
 }
+.main-container{
+    background-color: white;
+    
+}
+.main-container-basket{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+
+
 .topnav {
     background-color: #FFD1D1; /* Set the background color */
     padding-left: 16px;
@@ -129,12 +142,16 @@ table {
 .main-container {
     display: flex;
 }
-
+.main-container .filter-container {
+    margin: 40px;
+}
 
 .filters-container {
+    
     padding: 30px;
     border: 0.5px solid black;
     margin: 15px;
+    margin-top: 83px;
     margin-left: 70px;
     width: 20%; /* Initial width for filters */
     flex-shrink: 0; /* Prevent filters from shrinking */
@@ -752,7 +769,9 @@ body {
 	transform: rotateY(0deg);
 }
 .products-container {
+    
     margin: 10px;
+    margin-top: 0;
     flex-grow: 1; /* Expand to fill remaining space */
     overflow-y: auto; /* Enable vertical scrolling if needed */
     display: flex;
@@ -762,6 +781,7 @@ body {
 }
 .categories {
     width: 100%;
+    margin-left: 5px;
 }
 /* ----------------animation for BOX------------- */
 
@@ -1067,14 +1087,14 @@ nav {
 }
 
 nav a {
-    background: #ec7272;
+    background: #ffb4b4;
     color:#FFF;
     min-width:190px;
     transition: background 0.5s, color 0.5s, transform 0.5s;
     margin:0px 6px 6px 0px;
     padding:20px 40px;
     box-sizing:border-box;
-    border-radius:10px;
+    border-radius:20px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
     position:relative;
 }
